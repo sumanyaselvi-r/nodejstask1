@@ -16,7 +16,7 @@ const timpstamp= `Date ${today.getDate()}-${
 }-${today.getFullYear()}, Time ${today.getHours()}-${today.getMinutes()}-${today.getSeconds()}`;
 
 
-fs.writeFile(`./TextFiles/${timpstamp}.txt`,time,(err) => {
+fs.writeFile(path.join(__dirname,'files',`${timpstamp}.txt`),time,(err) => {
     if(err) throw err
     console.log('File Created!!!')
 
